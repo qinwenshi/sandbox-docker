@@ -12,7 +12,7 @@ RUN apk --update add curl tar \
     && apk del curl tar \
     && rm -f /var/cache/apk/*
 
-COPY docker-entrypoint.sh /docker-entrypoint.sh
+COPY entrypoint.sh /docker-entrypoint.sh
 COPY main.js /usr/local/sandbox/main.js
 
 WORKDIR /sandbox
