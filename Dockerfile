@@ -15,7 +15,7 @@ RUN mkdir -p /usr/local/sandbox \
 # Install sandbox pre-built binary
 # Install gosu 1.5
 RUN cd /usr/local/sandbox \
-&& wget -nv --ca-directory=/etc/ssl/certs "https://s3-us-west-2.amazonaws.com/getsandbox-assets/runtime-binary.tar" \
+&& wget -nv --ca-directory=/etc/ssl/certs "https://s3.amazonaws.com/sandbox-binaries/runtime-binary.tar" \
 && echo "$SANDBOX_DOWNLOAD_SHA256 runtime-binary.tar" | sha256sum -c - \
 && tar xf runtime-binary.tar \
 && rm -rf runtime-binary.tar \
